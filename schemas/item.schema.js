@@ -18,7 +18,7 @@ const ItemSchema = new mongoose.Schema({
 });
 
 // 프론트엔드 서빙을 위한 코드입니다. 모르셔도 괜찮아요!
-ItemSchema.virtual('todoId').get(function () {
+ItemSchema.virtual('itemId').get(function () {
   return this._id.toHexString();
 });
 ItemSchema.set('toJSON', {
